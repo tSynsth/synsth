@@ -12,9 +12,8 @@ namespace Roots\Sage\Wrapper;
 function template_path() {
   return SageWrapping::$main_template;
 }
-
-function sidebar_path() {
-  return new SageWrapping('templates/sidebar.php');
+function sidebar_path($sidebar) {
+  return new SageWrapping('templates/' . $sidebar . '.php');
 }
 
 class SageWrapping {

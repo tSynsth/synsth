@@ -1,0 +1,61 @@
+body.sandwitch, body.sidebar-right, body.sidebar-left {
+  .sidebar {
+    float: left;
+    z-index: 7;
+    & > .inner {
+      width: 100%;
+      padding: 15px 20px;
+      line-height: 2.8rem
+    }
+  }
+}
+
+body.sandwitch {
+  .sidebar {
+    //@include make-md-column(3);
+
+    width: 18.0%; // Overwrite bootstrap 25%
+    padding: 0;
+    @extend .hidden-xs;
+    @extend .hidden-sm;
+    min-height: initial;
+    & > .inner {
+
+    }
+    .ts-menu {
+      @extend .list-unstyled;
+    }
+    .input-group {
+      width: 100%;
+      input {
+        padding: 30px 30px;
+      }
+    }
+  }
+  #sidebar-left {
+    padding-left: 0;
+  }
+  #sidebar-right {
+    padding-right: 0;
+    float: right !important;
+  }
+  /*
+  .sidebar-right-top {
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+  }*/
+}
+
+body.sidebar-left, body.sidebar-right {
+  .sidebar {
+    @include make-sm-column(3); //$sidebar-xs-columns
+    @include make-xs-column(12);
+  }
+}
+
+.sf_block input {
+  width: 100% !important;
+}

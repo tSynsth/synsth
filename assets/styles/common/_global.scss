@@ -1,1 +1,30 @@
+//BOOTSTRAP COMMENT OUT
+.btn {
+  //border: 1px solid transparent;
+  &:hover,
+  &:focus,
+  &.focus {
+    //color: $btn-default-color;
+  }
+}
+//BOOTSTRAP
+.list-group-item:first-child, .list-group-item:last-child {
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
 
+// FIXS:
+img {
+  max-width:100%;
+  height:auto;
+}
+.row .row {
+  /*
+  margin-left: 0;
+  margin-right: 0;
+  */
+}
+
+.modal-backdrop.in {
+  opacity: 1;
+}

@@ -16,3 +16,66 @@
 @import "layouts/_footer";
 @import "layouts/_pages";
 @import "layouts/_posts";
+
+
+body {
+  background-color: $brand-bg;
+}
+
+// Content wrapper
+#wrap{
+  @media (min-width: $screen-lg-min) {
+    max-width: 1440px; // Overwrite bootstrap*/
+  }
+  & > .inner {
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (min-width: $screen-sm-min) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+// Main content area
+#main {
+  .container {
+    width: auto;
+  }
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    .row {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
+  margin-top: -1px; // bug fix for sticky element
+  //@include make-sm-column($main-sm-columns);
+  @include make-sm-column(12);
+  float: none !important;
+  padding: 0 !important;
+
+  .sidebar-primary & {
+    @include make-sm-column(6);
+  }
+  .sidebar-right & {
+    @include make-sm-column(9);
+  }
+  .sidebar-left & {
+    @include make-sm-column(9);
+  }
+  .sandwitch & {
+    @include make-md-column(6);
+  }
+  .sandwitch & {
+    @media (min-width: $screen-md-min) {
+      width: 57.0%;
+      margin: 0 21.5%;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 58.0%;
+      margin: 0 21.0%;
+    }
+  }
+}

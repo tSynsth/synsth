@@ -11,14 +11,14 @@ function body_class($classes) {
   // Add page slug if it doesn't exist
   if (is_single() || is_page() && !is_front_page()) {
     if (!in_array(basename(get_permalink()), $classes)) {
-      $classes[] = basename(get_permalink());
+      //$classes[] = basename(get_permalink());
     }
   }
 
   // Add class if sidebar is active
-  if (Config\display_sidebar()) {
+  /*if (Config\display_sidebar()) {
     $classes[] = 'sidebar-primary';
-  }
+  }*/
 
   return $classes;
 }

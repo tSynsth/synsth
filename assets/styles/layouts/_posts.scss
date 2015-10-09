@@ -1,0 +1,60 @@
+/* Loop */
+.hentry header {
+}
+
+.hentry time {
+}
+
+.hentry .byline {
+}
+
+.hentry .entry-content {
+}
+
+.hentry footer {
+}
+
+body[class*="loop"] {
+  .entry-data {
+
+  }
+  .entry-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    line-height: 1;
+    a {
+      color: #333;
+      font-size: 24px;
+      font-weight: 500;
+      //line-height: 1.6;
+    }
+  }
+  .entry-meta {
+    font-size: 15px;
+  }
+  .entry-summary {
+    font-size: 15px;
+  }
+}
+
+/* Single */
+body[class*="sngl"] {
+  article {
+    margin-bottom: 20px;
+    overflow: hidden;
+    header {
+      margin-bottom: 40px;
+    }
+  }
+  .entry-title {
+    height: 180px;
+    margin: 80px 0 20px;
+    text-align: center;
+  }
+
+}
+
+
+.media-heading {
+  margin-top: 0 !important;
+}

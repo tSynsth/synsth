@@ -11,4 +11,11 @@
   <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 <?php endwhile; ?>
 
-<?php the_posts_navigation(); ?>
+<?php if ($wp_query->max_num_pages > 1) : ?>
+  <nav class="post-nav">
+    <ul class="pager">
+      <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'sage')); ?></li>
+      <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'sage')); ?></li>
+    </ul>
+  </nav>
+<?php endif; ?>

@@ -1,0 +1,201 @@
+#banner {
+  height: 100%;
+  padding-top: 20px;
+  min-height: 200px;
+  @media (min-width: $screen-md-min) {
+    padding-top: 65px;
+    height: 255px;
+  }
+
+  & > .inner {
+    background: $brand-bg; //$brand-bg
+    height: 120px;
+    width: 100%;
+    /*background-color: red;*/
+    overflow: hidden;
+    height: 190px;
+    & {
+      padding: 20px 10px 0;
+      @media (min-width: $screen-md-min) {
+        padding: 35px 50px 0;
+      }
+      @media (min-width: $screen-xl-min) {
+        padding: 35px 110px 0;
+      }
+    }
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      padding: 20px 10px 0;
+      height: 120px;
+      h1 {
+        font-size: 30px !important;
+        font-weight: 500 !important;
+      }
+      @media (min-width: $screen-md-min) {
+        padding: 20px 50px 0;
+      }
+      @media (min-width: $screen-xl-min) {
+        padding: 20px 110px 0;
+      }
+      ul.nav-page-parent {
+        padding: 0 0 0 !important;
+      }
+    }
+  }
+
+  & > .ts-sticky-simple {
+    position: relative;
+  }
+  ul.nav-page-parent {
+    padding: 20px 0 0 !important;
+    margin-bottom: 0;
+  }
+}
+
+/*
+ * #banner>.inner>#banner-in
+ * -----------------------
+ */
+#banner-in {
+  width: 100%;
+  position: relative;
+
+  @media (min-width: $screen-md-min) {
+
+  }
+  .inner {
+    z-index: 100;
+    width: 100%;
+    position: relative;
+  }
+  .in {
+    text-align: center;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    /*background: $brand-bg;*/
+    padding-top: 5px;
+    /* padding-bottom: 10px;*/
+    /* ----------10px */
+    h1#page-header {
+      @include make-xs-column(8);
+      float: none !important;
+      margin: 0 auto;
+      font-size: 32px !important;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.2);
+      letter-spacing: -2.5px;
+      font-family: "raleway";
+      @media (min-width: $screen-md-min) {
+        font-size: 36px !important;
+        font-weight: 500;
+      }
+    }
+    display: none;
+    @media (min-width: $screen-xs-min) {
+      display: block;
+    }
+    .widget {
+      display: none;
+      @media (min-width: $screen-sm-min) {
+        display: block !important;
+      }
+    }
+  }
+}
+
+/*
+ * #banner>.inner>#banner-in>.inner>
+ * -----------------------
+ */
+
+#site-logo {
+  display: inline-block;
+  float: left;
+  img {
+    padding: 3px;
+    background: $brand-bg;
+    padding-top: 5px; /* ----------10px */
+  }
+  .retina {
+    display: none;
+  }
+}
+#menu {
+  float: right;
+  padding-top: 10px; /* ----------10px */
+
+  .btn-menu {
+    height: 45px;
+    width: 45px;
+    border-width: 3px;
+  }
+  .nav {
+    a {
+      color: initial;
+    }
+  }
+}
+
+/*header .page-header {
+  height: 180px;
+  margin: 80px 0 20px;
+  padding-bottom: 0;
+  text-align: center;
+}*/
+
+// MLVLMENU:
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover > a:after {
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+}
+
+/* ------------------------
+-----   Retina adjustments    -----
+------------------------------*/
+
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+
+  #site-logo .default {
+    display: none !important;
+  }
+  #site-logo .retina {
+    display: block;
+  }
+}
